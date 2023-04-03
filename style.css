@@ -26,11 +26,11 @@ body {
     min-height: 375px;
 }
 body {
-    width: 100%;
+    width: 100vw;
     min-height: 900px;
-    height: 100%;
+    height: 100vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #fafafa;
@@ -38,29 +38,30 @@ body {
 .container{
     margin-top: 80px;
 }
-.container .top_text_in_page {
+
+.container .top-text-in-page {
     width: 540px;
+    align-items: center;
     text-align: center;
-    margin: 50px ;
-    
+    margin: 50px auto;
     color: #4d4f62;
     margin-bottom: 50px;
 }
 
-.container .top_text_in_page h1 {
+.container .top-text-in-page h1 {
     font-weight: 200;
     font-size: 36px;
     line-height: 54px;
     letter-spacing: 0.25px;
 }
 
-.container .top_text_in_page h2 {
+.container .top-text-in-page h2 {
     font-weight: 600;
     font-size: 36px;
     line-height: 54px;
     letter-spacing: 0.25px;
 }
-.container .top_text_in_page p {
+.container .top-text-in-page p {
     font-weight: 400;
     font-size: 15px;
     line-height: 25px;
@@ -68,7 +69,7 @@ body {
     opacity: 0.5;
 }
 
-.cards_original {
+.cards-original {
     width: 1100px;
     height: 530px;
     display: flex;
@@ -93,6 +94,7 @@ body {
     box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
 }
 .red {
+    margin-bottom: 30px;
     border-top: 4px solid #ea5454;
     box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
 }
@@ -104,18 +106,15 @@ body {
     border-top: 4px solid #549ef2;
     box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
 }
-.margin-bottom {
-    margin-bottom: 30px;
-}
 
-.box-card-header {
+.box-card-div {
     font-weight: 600;
     font-size: 20px;
     line-height: 30px;
     color: #4d4f62;
     margin-bottom: 6px;
 }
-.box_text {
+.box-text {
     font-weight: 400;
     font-size: 13px;
     line-height: 23px;
@@ -127,4 +126,38 @@ body {
     width: 64px;
     height: 64px;
     align-self: flex-end;
+}
+
+@media only screen and (max-width: 1130px) {
+    body {
+        height: 100%;
+    }
+    .container .top-text-in-page {
+        width: 310px;
+    }
+    .container .top-text-in-pager h1,
+    .container .top-text-in-page h2 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .container .top-text-in-page h2 {
+        font-weight: 600;
+    }
+    .cards-original {
+        width: 375px;
+        height: 1008px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .box-card {
+        width: 311px;
+        height: 222px;
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+    .box-card-image {
+        width: 57px;
+        height: 57px;
+        align-self: flex-end;
+    }
 }
